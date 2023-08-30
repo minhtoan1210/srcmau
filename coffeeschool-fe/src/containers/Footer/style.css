@@ -1,0 +1,12 @@
+.ant-layout.site-layout>.footerAdmin
+{
+    background: white;
+    padding: 0px;
+}
+.ant-layout.site-layout>.footerAdmin p
+{
+    margin: 0px;
+    font-size: 14px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

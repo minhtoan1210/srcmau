@@ -1,0 +1,15 @@
+.page-404 {
+  position: fixed;
+  width: 100%;
+}
+.page-404 img {
+  width: 500px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page-404 .erorr {
+  text-align: center;
+  font-size: 20px;
+}

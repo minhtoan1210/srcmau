@@ -1,0 +1,58 @@
+/* .form-input {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-column-gap: 16px;
+} */
+
+.form-input {
+    display: flex;
+  }
+
+.form-inputt .form-input_left .form-input_left-title {
+    font-size: 18px;
+    color: #f7963f;
+}
+
+.form-inputt .form-input_left .ant-form-item .ant-row.ant-form-item-row {
+  display: block;
+}
+
+.form-inputt .ant-form-item-label > label:after {
+  display: none;
+}
+
+.method {
+  padding-bottom: 12px;
+  border-bottom: 1px solid #cccc;
+}
+
+.form-inputt .left {
+  border: 1px solid #f7963f;
+  padding: 12px;
+}
+
+.form-inputt .left .btn-input {
+  display: flex;
+  justify-content: space-around;
+}
+.form-input_left .total .total-provisional,
+.form-input_left .total .total-discount,
+.form-input_left .total .total-amount {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-input_left .total .total-provisional,
+.form-input_left .total .total-discount,
+.form-input_left .total .total-amount {
+  margin-bottom: 12px;
+}
+
+.form-input_left .total .total-amount .total-number {
+  color: #f7963f;
+}
+
+.PaymentModal .ant-modal-footer
+{
+    display: none;
+}

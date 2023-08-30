@@ -1,0 +1,236 @@
+#root {
+  .login {
+    display: flex;
+    justify-content: center;
+    transform: translateY(50%);
+    border-radius: 3px;
+    .login-container {
+      display: flex;
+      .login-left {
+        padding: 0px 15px;
+        width: 500px;
+
+        .text_title {
+          font-size: 24px;
+          font-weight: bold;
+        }
+
+        .text_sub {
+          font-size: 16px;
+
+          .phone {
+            color: blue;
+          }
+        }
+
+        .login-left_img {
+          height: 300px;
+        }
+      }
+
+      .login-right {
+        .login-title {
+          text-align: center;
+          font-size: 35px;
+        }
+
+        .form-login {
+          background-color: #fff;
+          border: 1px solid #f7963f;
+          text-align: center;
+          padding: 20px;
+          margin-bottom: 20px;
+          width: 300px;
+
+          .ant-form-item {
+            .ant-row {
+              align-items: center;
+
+              .ant-form-item-label {
+                width: 100%;
+              }
+            }
+
+            .ant-col-24 {
+              .ant-form-item-control-input {
+                .ant-form-item-control-input-content {
+                  .ant-checkbox-wrapper {
+                    padding-left: 15px;
+                  }
+
+                  .ant-btn-primary {
+                    width: 100%;
+                    background: #f7963f;
+                    border-radius: 3px;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .login-forgot {
+          text-align: center;
+
+          a {
+            color: #7c69ef;
+          }
+
+          :hover {
+            color: #4024e8;
+            text-decoration: underline;
+          }
+        }
+
+        .login-register {
+          text-align: center;
+
+          a {
+            color: #7c69ef;
+          }
+
+          :hover {
+            color: #4024e8;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 767px) and (max-width: 850px) {
+#root
+{
+  .login
+  {
+    .login-container
+    {
+      .login-left
+      {
+        width: 400px;
+        .login-left_img
+        {
+          height: 200px;
+        }
+        .login-left_text
+        {
+          .text_title
+          {
+            font-size: 20px;
+          }
+        }
+      }
+      .login-right
+      {
+
+      }
+    }
+  }
+}
+}
+
+@media (min-width: 500px) and (max-width: 766px) {
+  #root
+  {
+    .login
+    {
+     transform: translateY(0%);
+      .login-container
+      {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .login-left
+        {
+          width: 400px;
+          .login-left_img
+          {
+            height: 200px;
+          }
+          .login-left_text
+          {
+            .text_title
+            {
+              font-size: 20px;
+            }
+          }
+        }
+        .login-right
+        {
+  
+        }
+      }
+    }
+  }
+  }
+
+  @media (min-width: 400px) and (max-width: 500px) {
+    #root
+    {
+      .login
+      {
+       transform: translateY(0%);
+        .login-container
+        {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          .login-left
+          {
+            width: 400px;
+            .login-left_img
+            {
+              height: 200px;
+            }
+            .login-left_text
+            {
+              .text_title
+              {
+                font-size: 20px;
+              }
+            }
+          }
+          .login-right
+          {
+    
+          }
+        }
+      }
+    }
+    }
+
+    @media (min-width: 320px) and (max-width: 400px) {
+      #root
+      {
+        .login
+        {
+         transform: translateY(0%);
+          .login-container
+          {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .login-left
+            {
+              width: 320px;
+              .login-left_img
+              {
+                height: 100px;
+              }
+              .login-left_text
+              {
+                .text_title
+                {
+                  font-size: 20px;
+                }
+              }
+            }
+            .login-right
+            {
+      
+            }
+          }
+        }
+      }
+      }

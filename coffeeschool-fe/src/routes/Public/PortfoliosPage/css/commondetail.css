@@ -1,0 +1,232 @@
+:root {
+  --orange: #f7963f;
+  --dark-orange: #f7963f;
+  --light-orange: #f7d0b6;
+  --white: #ffffff;
+  --gray: #4c4d4c;
+  --light-gray: #e5e5e4;
+  --purple: #2b283a;
+  --blue: #26497b;
+  --bg-body: #f6f7f7;
+  --bg-section: #ffffff;
+  --bg-section-1: #f9f2ed;
+  --color: #7d7d7d;
+  --time-color: #26497b;
+  --heading-color: #f7963f;
+  --font-main: 'Archivo', sans-serif;
+  --font-header: 'Merriweather', serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--heading-color);
+}
+
+h1 {
+  font-size: 3.2rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+h3 {
+  font-size: 2rem;
+  margin-top: 11px;
+  margin-bottom: 21px;
+}
+
+h3>i {
+  font-size: 3.4rem;
+  color: var(--orange);
+  margin-right: 8px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.row {
+  display: flex;
+}
+
+.col-6 {
+  width: 50%;
+  padding: 0 15px;
+}
+
+.btn {
+  box-shadow: 0 0.5rem 1rem rgb(240 113 56 / 15%), 0 0.125rem 0.25rem rgb(240 113 56 / 15%);
+  border-radius: 20px;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: inherit;
+
+  padding: 1rem 0.5rem;
+
+  position: relative;
+  transition: 0.4s ease-in-out;
+  text-transform: none;
+  text-align: center;
+  display: block;
+}
+
+.btn-primary {
+  background-color: var(--orange);
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
+  background-color: var(--dark-orange);
+  border-color: var(--dark-orange);
+  box-shadow: 0 0 0 transparent;
+}
+
+.main-title {
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.main-title::before,
+.main-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 3px;
+}
+
+.main-title::before {
+  background-color: var(--blue);
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  content: '';
+  width: 15px;
+  left: 0;
+}
+
+.main-title::after {
+  background-color: var(--orange);
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  width: 30px;
+  left: 15px;
+}
+
+.title {
+  color: #f1f2f4;
+  margin-top: 0;
+  margin-bottom: 37px;
+  position: relative;
+}
+
+.title::before,
+.title::after {
+  content: '';
+  background-color: var(--orange);
+  border-radius: 0.5rem;
+  height: 0.5rem;
+  position: absolute;
+  bottom: -1.7rem;
+  left: 0;
+  width: 5rem;
+  z-index: 1;
+}
+
+.title:after {
+  background-color: #ff965d;
+  width: 1.6rem;
+}
+
+.main-content {
+  max-width: 1210px;
+  margin: 0 auto;
+  display: flex;
+  padding-top: 128px;
+  padding-bottom: 100px;
+}
+
+.section {
+  border-radius: 20px;
+}
+
+.aside {
+  width: 26%;
+  margin-right: 2%;
+}
+
+.content {
+  width: 72%;
+  position: relative;
+  background-color: var(--bg-section);
+  border-radius: 20px;
+  padding: 30px 30px 0;
+}
+
+.footer {
+  color: #8697a8;
+  font-size: 1.4rem;
+  padding-top: 3.2rem;
+  padding-bottom: 0.2rem;
+  text-align: center;
+}
+
+/* Responsive */
+
+@media (max-width: 1200px) {
+  .main-content {
+    display: block;
+    padding: 100px 20px 20px;
+  }
+
+  .aside {
+    width: 100%;
+    margin-right: 0%;
+    margin-bottom: 20px;
+    padding-bottom: 32px;
+  }
+
+  .content {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .row {
+    display: block;
+    margin: 0;
+  }
+
+  .col-6 {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.main-title.work {
+  font-family: 'Archivo';
+  font-size: 32px;
+  width: 100%;
+  font-weight: 900;
+}
+
+.main-title.curriculumvitae {
+  font-family: 'Archivo';
+  font-size: 32px;
+  width: 100%;
+  font-weight: 900;
+}

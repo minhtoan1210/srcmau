@@ -1,0 +1,68 @@
+@font-face {
+  font-family: 'Ab';
+  src: url('../font/Archivo-Bold.woff') format('woff'),
+    url('../font/Archivo-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: 'Abc';
+  src: url('../font/Archivo-BoldItalic.woff') format('woff'),
+    url('../font/Archivo-BoldItalic.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: 'Ai';
+  src: url('../font/Archivo-Italic.woff') format('woff'),
+    url('../font/Archivo-Italic.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Am';
+  src: url('../font/Archivo-Medium.woff') format('woff'),
+    url('../font/Archivo-Medium.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: 'Amc';
+  src: url('../font/Archivo-MediumItalic.woff') format('woff'),
+    url('../font/Archivo-MediumItalic.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: 'Ar';
+  src: url('../font/Archivo-Regular.woff') format('woff'),
+    url('../font/Archivo-Regular.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: 'As';
+  src: url('../font/Archivo-SemiBold.woff') format('woff'),
+    url('../font/Archivo-SemiBold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: 'Asi';
+  src: url('../font/Archivo-SemiBoldItalic.woff') format('woff'),
+    url('../font/Archivo-SemiBoldItalic.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: fallback;
+}

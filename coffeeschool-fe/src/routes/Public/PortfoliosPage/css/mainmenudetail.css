@@ -1,0 +1,673 @@
+/* Mainmenu */
+
+.circle-menu {
+  background-color: var(--dark-orange);
+  border-radius: 50% 1.25rem 50% 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 6rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 6rem;
+  z-index: 4;
+}
+
+.hamburger {
+  cursor: pointer;
+}
+
+.hamburger .line {
+  background-color: #fff;
+  border-radius: 0.25rem;
+  display: block;
+  margin: 0.5rem 0;
+  height: 0.3rem;
+  width: 2.4rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.hamburger .line:nth-child(2) {
+  margin-left: 0.4rem;
+  width: 2rem;
+}
+
+.hamburger.is-active .line:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.is-active .line:nth-child(2) {
+  opacity: 0;
+  transform: rotate(45deg);
+}
+
+.hamburger.is-active .line:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.inner-menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 60px;
+  overflow: hidden;
+  padding-right: 3.2rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70%;
+  z-index: 3;
+}
+
+.is-active .nav {
+  overflow: visible;
+  width: auto;
+  opacity: 1;
+  transition: width 2s ease-in-out;
+}
+
+.nav {
+  box-shadow: 0 1.5rem 2.5rem rgb(240 113 56 / 5%), 0 0.5rem 1rem rgb(240 113 56 / 5%);
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: width 2s ease-in-out;
+  background-color: var(--dark-orange);
+  border-bottom: 1px solid var(--dark-orange);
+  border-top: 1px solid var(--dark-orange);
+  display: flex;
+  border-radius: 3.2rem 0 0 3.2rem;
+  padding-left: 25px;
+}
+
+.nav__item {
+  margin-right: 4rem;
+  list-style: none;
+}
+
+.nav__item a {
+  padding: 18px 0;
+  color: rgba(255, 255, 255, 0.8);
+  display: block;
+  text-decoration: none;
+}
+
+.open-menu .inner-menu {
+  pointer-events: all;
+}
+
+/* Responsive */
+
+@media (max-width: 1200px) {
+  .hamburger .line {
+    margin: 0.4rem 0;
+    height: 0.2rem;
+    width: 1.8rem;
+  }
+
+  .circle-menu {
+    border-radius: 50% 0 50% 50%;
+    margin-top: 0;
+    margin-right: 0;
+    position: fixed;
+    height: 60px;
+    width: 60px;
+    z-index: 1101;
+  }
+
+  .open-menu .circle-menu {
+    box-shadow: 0 0 0 0.0625rem rgb(240 113 56 / 50%);
+    background-color: transparent;
+  }
+
+  .hamburger.is-active .line:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+
+  .hamburger.is-active .line {
+    background-color: #f07138;
+  }
+
+  .inner-menu {
+    height: 100vh;
+    width: 100%;
+    padding-right: 0;
+    position: fixed;
+    pointer-events: none;
+    z-index: 1100;
+  }
+
+  .nav {
+    background-color: #302c40 !important;
+    border-color: #302c40;
+    border-radius: 0;
+    flex-direction: column;
+    padding: 80px 30px 30px;
+    box-shadow: 0 0 0 none;
+    transition: width 1s ease-in-out;
+    z-index: 999;
+  }
+
+  .is-active .nav {
+    width: 100%;
+    height: 100%;
+    transition: width 1s ease-in-out;
+  }
+}
+
+.contact__item .icon {
+  width: 15px;
+  height: 15px;
+}
+
+.content-item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  font-family: 'Archivo';
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.timeline-percent {
+  width: 100%;
+  height: 22px;
+  text-align: center;
+  position: relative;
+  background: #f7d0b6;
+  border-radius: 16px;
+  margin-bottom: 15px;
+}
+
+.timeline-percent .timeline-percent_timeline {
+  width: 0%;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  bottom: 0%;
+  background: 1%;
+  background: #f7963f;
+  text-align: right;
+  padding-right: 10px;
+  color: #fff;
+  border-radius: 16px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.timeline-percent .timeline-percent_name {
+  font-size: 16px;
+}
+
+.timeline-percent .timeline-percent_left {
+  font-size: 14px;
+  top: 0%;
+  left: 2%;
+  position: absolute;
+  color: white;
+}
+
+.timeline-percent_timeline .timeline-percent_right {
+  font-size: 11px;
+  color: white;
+  z-index: 14;
+}
+
+.timeline-percent_timeline .percent-sub {
+  height: 100%;
+  width: 0%;
+  position: absolute;
+  padding-right: 10px;
+  border-radius: 16px;
+  left: 0%;
+  top: 0%;
+  animation: mymove 5s infinite;
+  background: #f7963f;
+  opacity: 0;
+}
+
+.timeline-percent_timeline .percent-sub {
+  height: 100%;
+  width: 0%;
+  position: absolute;
+  padding-right: 10px;
+  border-radius: 16px;
+  left: 0%;
+  top: 0%;
+  animation: mymove 5s infinite;
+  background: #f7963f;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.timeline-percent_timeline .percent-sub.mystyle {
+  width: 100%;
+  transition: 0.5s;
+  opacity: 1;
+}
+
+.certificate-name {
+  width: 100%;
+  position: relative;
+  font-size: 20px;
+  padding-left: 20px;
+}
+
+/* .certificate-name::before {
+  content: '';
+  position: absolute;
+  top: 25%;
+  left: 0%;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--dark-orange);
+  box-shadow: 0 0 0 0.1875rem rgb(240 113 56 / 25%);
+  content: '';
+  z-index: 2;
+}
+
+.certificate-name::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 1%;
+  background: #f7963f;
+  width: 1px;
+  bottom: 0%;
+  border-radius: 50%;
+  height: calc(100% + 25%);
+  opacity: 0.3;
+} */
+
+.reference:nth-last-child(1) .certificate-name:after {
+  width: 0px;
+}
+
+.contact__info .contact__item {
+  align-items: center;
+}
+
+.contact__item.address {
+  align-items: center;
+}
+
+.contact__item.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 30px;
+  margin: auto;
+  background: #f7963f;
+  border-radius: 8px;
+  color: white;
+}
+
+.contact__item.button i.fa-arrow-down {
+  padding-right: 10px;
+}
+
+.item-content .item-content_title {
+  font-size: 23.5px;
+  font-family: 'Archivo';
+  font-weight: 600;
+}
+
+.item-content .curriculum>.timeline__item::after {
+  content: '';
+  position: absolute;
+  top: 2%;
+  bottom: 0%;
+  left: 0%;
+  width: 1px;
+  height: calc(100%);
+  background: #f7963f;
+  opacity: 0.3;
+}
+
+.item-content .curriculum:nth-last-child(1)>.timeline__item::after {
+  content: '';
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  width: 0px;
+}
+
+.item-content .timeline .timeline__item .item__job-title {
+  font-family: 'Archivo';
+  font-weight: 600;
+  font-size: 14px;
+  color: #f7963f;
+}
+
+.item-content .timeline .timeline__item .item__job-title-discription {
+  font-family: 'Archivo';
+  font-weight: 700;
+  font-size: 14px;
+  color: #f7963f;
+}
+
+.item-content .timeline .timeline__item .item__job-timdate {
+  font-family: 'Archivo';
+  font-weight: 700;
+  font-size: 14px;
+  color: #969fa6;
+}
+
+.item-content .timeline .timeline__item .item__job-place {
+  font-family: 'Archivo';
+  font-weight: 700;
+  font-size: 16px;
+  color: #4c4d4c;
+}
+
+.item-content .timeline .timeline__item .item__job-description {
+  font-family: 'Archivo';
+  font-weight: 700;
+  font-size: 15px;
+  color: #7d7d7d;
+}
+
+.detailportfolios {
+  margin-top: 5%;
+}
+
+.images-spinning {
+  position: absolute;
+  left: 4%;
+  z-index: 0;
+  bottom: 13%;
+}
+
+.detailportfolios {
+  z-index: 99;
+}
+
+.detail-portfolios {
+  position: relative;
+}
+
+.images-background {
+  position: absolute;
+  right: -13%;
+  z-index: 0;
+  bottom: 50%;
+}
+
+.title-reference {
+  margin-top: 11px;
+  margin-bottom: 21px;
+  font-size: 23.5px;
+  font-family: 'Archivo';
+  font-weight: 600;
+}
+
+.item-content_title-skill {
+  margin-top: 11px;
+  margin-bottom: 21px;
+  font-size: 23.5px;
+  font-family: 'Archivo';
+  font-weight: 600;
+}
+
+.section-content_skills {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 25px;
+}
+
+.section.content.resume {
+  z-index: 99;
+}
+
+.contact-detail {
+  padding-top: 28px;
+}
+
+.certificate-name {
+  font-family: 'Archivo';
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.contact__name>h2 {
+  font-family: 'As';
+  font-size: 28px;
+  font-weight: bold;
+  color: #f7963f;
+}
+
+.contact__item.favorite .item-favorite {
+  font-size: 14px;
+  font-family: 'Archivo';
+}
+
+.achievements .item-content_title {
+  font-size: 23.5px;
+  font-family: 'Archivo';
+  font-weight: 600;
+}
+
+.achievements .curriculum .timeline__item .item__job-place {
+  font-family: 'Archivo';
+  font-weight: 700;
+  font-size: 16px;
+  color: #4c4d4c;
+}
+
+.achievements .curriculum .timeline__item .item__job-title {
+  font-family: 'Archivo';
+  font-weight: 600;
+  font-size: 14px;
+  color: #f7963f;
+}
+
+.achievements .curriculum .timeline__item .item__job-timdate {
+  font-family: 'Archivo';
+  font-weight: 700;
+  font-size: 14px;
+  color: #969fa6;
+}
+
+.achievements .curriculum .timeline__item .item__job-description {
+  font-family: 'Archivo';
+  font-weight: 700;
+  font-size: 15px;
+  color: #7d7d7d;
+}
+
+.certificate .certificate-name {
+  position: relative;
+  font-family: 'Archivo';
+  font-weight: 700;
+  font-size: 16px;
+  color: #4c4d4c;
+  cursor: pointer;
+  margin-bottom: 0px;
+}
+
+.certificate .certificate-name::before {
+  background-color: var(--dark-orange);
+  box-shadow: 0 0 0 0.1875rem rgb(240 113 56 / 25%);
+  content: '';
+  border-radius: 50%;
+  position: absolute;
+  top: 4px;
+  left: -0.5rem;
+  height: 8px;
+  width: 8px;
+  z-index: 2;
+}
+
+.certificate .certificate-container:nth-last-child(1) .certificate-name::after {
+  width: 0;
+}
+
+.container-skill {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 16px;
+  grid-row-gap: 10px;
+}
+
+.timeline-about {
+  font-size: 16px;
+  font-family: 'Ab';
+  color: #7d7d7d;
+}
+
+.footer>p {
+  font-size: 16px;
+  font-family: 'Ab';
+}
+
+.item-favorite .item-favorite_img {
+  width: 30px;
+  height: 30px;
+  display: block;
+  margin: auto;
+}
+
+.item-favorite {
+  text-align: center;
+}
+
+.loader {
+  position: absolute;
+  top: calc(50% - 32px);
+  left: calc(50% - 32px);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  perspective: 800px;
+}
+
+.inner {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.inner.one {
+  left: 0%;
+  top: 0%;
+  animation: rotate-one 1s linear infinite;
+  border-bottom: 3px solid #f7963f;
+}
+
+.inner.two {
+  right: 0%;
+  top: 0%;
+  animation: rotate-two 1s linear infinite;
+  border-right: 3px solid #f7963f;
+}
+
+.inner.three {
+  right: 0%;
+  bottom: 0%;
+  animation: rotate-three 1s linear infinite;
+  border-top: 3px solid #f7963f;
+}
+
+@keyframes rotate-one {
+  0% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+  }
+}
+
+@keyframes rotate-two {
+  0% {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+  }
+}
+
+@keyframes rotate-three {
+  0% {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+  }
+}
+
+.contact__item .contact__item_email {
+  color: #7d7d7d;
+}
+
+.content-item .item-content div:nth-last-child(1) .curriculum>.timeline__item::after {
+  width: 0px;
+  height: 0px;
+}
+
+.content-item .item-content div:nth-child(1) h3.item-content_title {
+  display: block;
+}
+
+.section-while .item-content div:nth-child(1) h3.item-content_title {
+  display: block;
+}
+
+.section-while .item-content div:nth-last-child(1) .timeline.curriculum .timeline__item::after {
+  display: none;
+}
+
+.section-content.section-bg.licensed .row .achievements div h3.item-content_title {
+  display: none;
+}
+
+.section-content.section-bg.licensed .row .achievements div:nth-child(1) h3.item-content_title {
+  display: block;
+}
+
+/* .logodetail
+{
+  position: absolute;
+  top: 0%;
+  width: 150px;
+  left: 50%;
+} */
+.licensed .row .achievements div .timeline.curriculum .timeline__item::after {
+  content: '';
+  position: absolute;
+  top: 2%;
+  bottom: 0%;
+  left: 0%;
+  height: calc(100%);
+  background: #f7963f;
+  opacity: 0.3;
+}
+
+.licensed .row .achievements div:nth-last-child(1) .timeline.curriculum .timeline__item::after {
+  content: '';
+  display: none;
+}
+
+.inner-menu.js-menu.is-active {
+  pointer-events: auto;
+}
+
+.section-content .row .certificate .title-reference {
+  text-transform: uppercase;
+}
+
+.main-title_curriculumvitae .main-title_curriculumvitae-left .timeline.curriculum .timeline__item .item__job-description {
+  white-space: pre-line;
+}
+
+.main-title_curriculumvitae .main-title_curriculumvitae-right .timeline.curriculum .timeline__item .item__job-description {
+  white-space: pre-line;
+}

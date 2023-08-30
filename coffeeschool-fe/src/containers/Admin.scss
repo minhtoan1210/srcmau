@@ -1,0 +1,68 @@
+.site-layout {
+  .site-layout-background {
+    padding: 0;
+    padding-right: 50px;
+    padding-left: 13px;
+    display: flex;
+    justify-content: space-between;
+    background: #ffffff;
+    box-shadow: 2px 2px 2px #e4d4cd;
+    position: relative;
+    .header-left {
+      padding-left: 15px;
+      .logo {
+        .logo-img {
+          width: 110px;
+          height: auto;
+          padding: 5px;
+        }
+      }
+    }
+    .header-right {
+      position: relative;
+      .header-avatar {
+        cursor: pointer;
+      }
+    }
+  }
+}
+.ant-popover {
+  .ant-popover-content {
+    .ant-popover-inner {
+      .ant-popover-inner-content {
+        padding: 0px;
+        div {
+          padding-top: 10px;
+          .my-account {
+            cursor: pointer;
+            text-align: left;
+            padding: 5px 10px;
+            border-bottom: 1px solid #c2c2c2;
+            margin: 0;
+          }
+          :hover {
+            background: #c2c2c2;
+            color: white;
+          }
+          .logout {
+            cursor: pointer;
+            width: 110px;
+            text-align: left;
+            padding: 5px 10px;
+            margin: 0;
+          }
+          :hover {
+            background: #c2c2c2;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+.ant-layout-has-sider {
+  .ant-layout-content {
+    height: 100%;
+    overflow-y: auto;
+  }
+}
